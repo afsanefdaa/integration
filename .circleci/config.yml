@@ -12,4 +12,19 @@ jobs:
           steps:
             - run: npm install
       - run: npm run test
-      - run: npm run flow
+
+  flow-check:
+    steps:
+      - checkout
+      - restore-dependency-cache
+      - run:
+          name: Check flow
+          command: npm run flow
+
+  format-check:
+    steps:
+      - checkout
+      - restore-dependency-cache
+      - run:
+          name: Check format
+          command: npm run format
