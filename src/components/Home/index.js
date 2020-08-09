@@ -2,8 +2,9 @@
 import React from 'react';
 import logo from '../../logo.svg';
 import './index.css';
+import type { Props } from './types';
 
-const Home = ({ title }) => (
+const Home = ({ title }: Props) => (
   <div className="App">
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
